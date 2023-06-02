@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <include
+        android:id="@+id/include"
+        layout="@layout/header" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:text="Se connecter"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/email"
+            android:elevation="5dp"
+            android:hint="Adresse mail"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#888"
+            android:textColor="#000"
+            android:background="@drawable/rounded_border"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:elevation="5dp"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#888"
+            android:textColor="#000"
+            android:background="@drawable/rounded_border"/>
+
+        <Button
+            android:id="@+id/login"
+            android:text="Connexion"
+            android:textSize="15sp"
+            android:padding="8dp"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_border"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+            <TextView
+                android:text="Pas encore de compte ? "
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Inscrivez-vous"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRegisterClick"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
